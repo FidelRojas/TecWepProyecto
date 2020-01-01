@@ -1,0 +1,32 @@
+C:\Users\Fidel\source\repos\123\PremierLeague\PremierLeague\obj\Debug\netcoreapp2.2\PremierLeague.csprojAssemblyReference.cache
+C:\Users\Fidel\source\repos\123\PremierLeague\PremierLeague\obj\Debug\netcoreapp2.2\PremierLeague.RazorAssemblyInfo.cache
+C:\Users\Fidel\source\repos\123\PremierLeague\PremierLeague\obj\Debug\netcoreapp2.2\PremierLeague.RazorAssemblyInfo.cs
+C:\Users\Fidel\source\repos\123\PremierLeague\PremierLeague\obj\Debug\netcoreapp2.2\PremierLeague.AssemblyInfoInputs.cache
+C:\Users\Fidel\source\repos\123\PremierLeague\PremierLeague\obj\Debug\netcoreapp2.2\PremierLeague.AssemblyInfo.cs
+C:\Users\Fidel\source\repos\123\PremierLeague\PremierLeague\bin\Debug\netcoreapp2.2\appsettings.Development.json
+C:\Users\Fidel\source\repos\123\PremierLeague\PremierLeague\bin\Debug\netcoreapp2.2\appsettings.json
+C:\Users\Fidel\source\repos\123\PremierLeague\PremierLeague\bin\Debug\netcoreapp2.2\Properties\launchSettings.json
+C:\Users\Fidel\source\repos\123\PremierLeague\PremierLeague\bin\Debug\netcoreapp2.2\PremierLeague.deps.json
+C:\Users\Fidel\source\repos\123\PremierLeague\PremierLeague\bin\Debug\netcoreapp2.2\PremierLeague.runtimeconfig.json
+C:\Users\Fidel\source\repos\123\PremierLeague\PremierLeague\bin\Debug\netcoreapp2.2\PremierLeague.runtimeconfig.dev.json
+C:\Users\Fidel\source\repos\123\PremierLeague\PremierLeague\bin\Debug\netcoreapp2.2\PremierLeague.dll
+C:\Users\Fidel\source\repos\123\PremierLeague\PremierLeague\obj\Debug\netcoreapp2.2\PremierLeague.RazorTargetAssemblyInfo.cache
+C:\Users\Fidel\source\repos\123\PremierLeague\PremierLeague\bin\Debug\netcoreapp2.2\PremierLeague.pdb
+C:\Users\Fidel\source\repos\123\PremierLeague\PremierLeague\obj\Debug\netcoreapp2.2\PremierLeague.dll
+C:\Users\Fidel\source\repos\123\PremierLeague\PremierLeague\obj\Debug\netcoreapp2.2\PremierLeague.pdb
+C:\Users\Fidel\source\repos\123\PremierLeague - copia - copia\PremierLeague\bin\Debug\netcoreapp2.2\appsettings.Development.json
+C:\Users\Fidel\source\repos\123\PremierLeague - copia - copia\PremierLeague\bin\Debug\netcoreapp2.2\appsettings.json
+C:\Users\Fidel\source\repos\123\PremierLeague - copia - copia\PremierLeague\bin\Debug\netcoreapp2.2\Properties\launchSettings.json
+C:\Users\Fidel\source\repos\123\PremierLeague - copia - copia\PremierLeague\bin\Debug\netcoreapp2.2\PremierLeague.deps.json
+C:\Users\Fidel\source\repos\123\PremierLeague - copia - copia\PremierLeague\bin\Debug\netcoreapp2.2\PremierLeague.runtimeconfig.json
+C:\Users\Fidel\source\repos\123\PremierLeague - copia - copia\PremierLeague\bin\Debug\netcoreapp2.2\PremierLeague.runtimeconfig.dev.json
+C:\Users\Fidel\source\repos\123\PremierLeague - copia - copia\PremierLeague\bin\Debug\netcoreapp2.2\PremierLeague.dll
+C:\Users\Fidel\source\repos\123\PremierLeague - copia - copia\PremierLeague\bin\Debug\netcoreapp2.2\PremierLeague.pdb
+C:\Users\Fidel\source\repos\123\PremierLeague - copia - copia\PremierLeague\obj\Debug\netcoreapp2.2\PremierLeague.csprojAssemblyReference.cache
+C:\Users\Fidel\source\repos\123\PremierLeague - copia - copia\PremierLeague\obj\Debug\netcoreapp2.2\PremierLeague.RazorAssemblyInfo.cache
+C:\Users\Fidel\source\repos\123\PremierLeague - copia - copia\PremierLeague\obj\Debug\netcoreapp2.2\PremierLeague.RazorAssemblyInfo.cs
+C:\Users\Fidel\source\repos\123\PremierLeague - copia - copia\PremierLeague\obj\Debug\netcoreapp2.2\PremierLeague.AssemblyInfoInputs.cache
+C:\Users\Fidel\source\repos\123\PremierLeague - copia - copia\PremierLeague\obj\Debug\netcoreapp2.2\PremierLeague.AssemblyInfo.cs
+C:\Users\Fidel\source\repos\123\PremierLeague - copia - copia\PremierLeague\obj\Debug\netcoreapp2.2\PremierLeague.RazorTargetAssemblyInfo.cache
+C:\Users\Fidel\source\repos\123\PremierLeague - copia - copia\PremierLeague\obj\Debug\netcoreapp2.2\PremierLeague.dll
+C:\Users\Fidel\source\repos\123\PremierLeague - copia - copia\PremierLeague\obj\Debug\netcoreapp2.2\PremierLeague.pdb
