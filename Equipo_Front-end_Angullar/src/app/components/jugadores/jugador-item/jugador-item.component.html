@@ -1,0 +1,45 @@
+<!-- Team member -->
+
+    <div class="image-flip " ontouchstart="this.classList.toggle('hover'); ">
+
+        <div class="mainflip">
+            
+            <div class="frontside">
+                <div class="card ">
+                    <div class="card-body text-center" >
+                        <p><img style="background-color: rgb(209, 209, 209);" class=" img-fluid" src="https://images.vexels.com/media/users/3/130465/isolated/preview/eb05d8397d6b57794b257dd0bd80b554-silueta-de-futbolista-1-by-vexels.png" alt="card image"></p>
+                        <h4 class="card-title">{{jugador.nombre}} </h4>
+                        <p style="color: black!important" class="card-title">{{jugador.posicion}} </p>
+
+
+
+
+                        <a href="#" class="btn btn-primary btn-sm"><i class="fa fa-plus"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="backside justify-content-center">
+                <div class="card justify-content-center">
+                    <div class="card-body text-center mt-4">
+                        <h4 class="card-title">{{jugador.nombre}} </h4>
+                        <h2 class="card-title">#{{jugador.numero}} </h2>
+
+                        <p class="card-text"> <b>Posición: </b> {{jugador.posicion}}</p>
+                        <p class="card-text"> <b>Pais: </b> {{jugador.pais}}</p>
+                        <p class="card-text"> <b>Altura: </b> {{jugador.altura}} cm</p>
+                      
+                        <div class="card-footer" >
+                            <div class="btn-group" role="group" aria-label="Button group with nested dropdown">
+                                <button (click)="onVer(jugador)"  type="button" class="btn btn-success"><span class="fa fa-eye"></span></button>
+                                <button (click)="onEdit(jugador)" type="button" class="btn btn-secondary"><span class="fa fa-edit"></span></button>
+                                <button (click)="onDelete(jugador)" type="button" class="btn btn-danger"><span class="fa fa-remove"></span></button>
+                                
+                                
+                            </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<!-- ./Team member -->

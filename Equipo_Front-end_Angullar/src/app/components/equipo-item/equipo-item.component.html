@@ -1,0 +1,26 @@
+
+    <div class="card h-100  ">
+        <img class="card-img-top" src="http://placehold.it/500x325" alt="" >
+        <div class="card-body">
+        <h4 class="card-title">{{equipo.nombre}}</h4>
+        <p><b>Entrenador: </b>{{equipo.entrenador}}</p>
+        <p><b>Estadio: </b>{{equipo.estadio}}</p>
+        </div>
+        <div class="card-footer " >
+            <div class="btn-group" role="group" aria-label="Button group with nested dropdown">
+                <button (click)="onVer(equipo)" type="button" class="btn btn-primary">Ver</button>
+                
+                <div class="btn-group" role="group">
+                    <button id="btnGroupDrop1" type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Mas
+                    </button>
+                    <div class="dropdown-menu" aria-labelledby="btnGroupDrop1">
+                    <a (click)="onEdit(equipo)" class="dropdown-item" >Editar</a>
+                    <a (click)="onDelete(equipo)" class="dropdown-item" >Eliminar</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+

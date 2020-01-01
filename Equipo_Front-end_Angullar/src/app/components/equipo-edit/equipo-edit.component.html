@@ -1,0 +1,49 @@
+<div class="container">
+        <!-- Jumbotron Header -->
+        <header class="jumbotron my-4">
+            <h1 class="display-3">Editar Equipo</h1>
+          
+            <form (ngSubmit)="onSubmit(equipo)">
+            <div class="form-group row">
+                <div class="col">
+                <label for="exampleInputEmail1">Nombre</label>
+                <input type="text" name="nombre" [(ngModel)]="equipo.nombre" placeholder="Nombre" class="form-control">
+                <small id="nombreHelp" class="form-text text-muted">*El nombre es obligatorio</small>
+
+                </div>
+                <div class="col">
+                        <label for="exampleInputEmail1">Entrenador</label>
+
+                <input type="text" name="entrenador" [(ngModel)]="equipo.entrenador" placeholder="Entrenador"class="form-control">
+                </div>
+                
+                
+    
+            </div>
+            <div class="form-group row">
+                
+                <div class="col">
+                        <label for="exampleInputEmail1">Fundación</label>
+
+                <input type="text" name="fundacion" [(ngModel)]="equipo.fundacion" placeholder="Fundacion"class="form-control">
+                </div>
+                <div class="col">
+                        <label for="exampleInputEmail1">Estadio</label>
+
+                    <input type="text" name="estadio" [(ngModel)]="equipo.estadio" placeholder="Estadio"class="form-control">
+                </div>
+                
+    
+            </div>
+            <label for="exampleInputEmail1">Info</label>
+            
+                <textarea type="text" name="info" [(ngModel)]="equipo.info" placeholder="Info"class="textarea form-control"></textarea>
+            <div class="form-group">
+                <input type="submit" value="Editar" class="btn btn-success" >
+                <button type="button" routerLink="../" class="btn btn-secondary">Cancelar</button>
+
+
+            </div>
+            </form>
+        </header>
+    </div>

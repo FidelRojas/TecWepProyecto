@@ -1,0 +1,15 @@
+{
+    "devServer": {
+        "historyApiFallback": true,
+        "proxy": {
+          "/api": {
+            "target" : "http://localhost:64498/api/equipos",
+            "secure": false
+          }
+        }
+      },
+"/api": {
+    "target": "http://localhost:64498/api/equipos",
+    "secure": false
+}
+}

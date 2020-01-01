@@ -1,0 +1,13 @@
+<section id="team" class="pb-5">
+    <div class="container">
+        <h5 class="section-title h1">Jugadores</h5>
+        <app-add-jugador [idEquipo]="idEqipo" (addJugador)="addJugador($event)"></app-add-jugador>
+        <div class="" >
+                <div id="Equipos" class="row text-center  justify-content-center "  >
+
+                <app-jugador-item *ngFor="let jugador1 of jugadores"  [jugador]="jugador1" (deleteJugador)="deleteJugador($event)"(editJugador)="editJugador($event)"></app-jugador-item>
+                </div>
+        </div>
+    </div>
+</section>
+        

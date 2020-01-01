@@ -1,0 +1,28 @@
+<div class="container">
+    <!-- Heading Row -->
+    <div class="row align-items-center my-5">
+      <div class="col-lg-6">
+        <img class="img-fluid rounded mb-4 mb-lg-0" src="http://placehold.it/400x400" alt="">
+      </div>
+      <!-- /.col-lg-8 -->
+      <div class="col-lg-6">
+        <h1 class="font-weight-light">{{jugador.nombre}}</h1>
+  
+        <p><b>Entrenador: </b>{{jugador.numero}}</p>
+        <p><b>Entrenador: </b>{{jugador.pais}}</p>
+        <p><b>Entrenador: </b>{{jugador.altura}}</p>
+        <p><b>Entrenador: </b>{{jugador.posicion}}</p>
+
+        <div class="btn-group" role="group">
+            <a (click)="onEdit()"  class="btn btn-primary  ">Editar</a>
+            <a (click)="onDelete(jugador)" class="btn btn-danger " >Eliminar</a>
+        </div>
+      </div>
+      <!-- /.col-md-4 -->
+    </div>
+    <!-- /.row -->
+  
+   
+      
+  </div>
+  <!-- /.container -->

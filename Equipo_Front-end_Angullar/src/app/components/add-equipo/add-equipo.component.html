@@ -1,0 +1,60 @@
+<div class="container">
+    <!-- Jumbotron Header -->
+    <header class="jumbotron my-4">
+        <h1 class="display-3">Nuevo Equipo</h1>
+        <div class="row">
+        <div class="col-md-9 mb-md-0 mb-5">
+        <form (ngSubmit)="onSubmit()">
+        <div class="form-group row">
+            <div class="col">
+            <label for="exampleInputEmail1">Nombre</label>
+                
+            <input type="text" name="nombre" [(ngModel)]="nombre" placeholder="Nombre" class="form-control">
+            <small id="nombreHelp" class="form-text text-muted">*El nombre es obligatorio</small>
+
+            </div>
+            <div class="col">
+                <label for="exampleInputEmail1">Entrenador</label>
+            
+                <input type="text" name="entrenador" [(ngModel)]="entrenador" placeholder="Entrenador"class="form-control">
+            </div>
+            
+            
+
+        </div>
+        <div class="form-group row">
+            
+            <div class="col">
+                <label for="exampleInputEmail1">Fundación</label>
+
+            <input type="text" name="fundacion" [(ngModel)]="fundacion" placeholder="Fundacion"class="form-control">
+            </div>
+            <div class="col">
+                <label for="exampleInputEmail1">Estadio</label>
+
+                <input type="text" name="estadio" [(ngModel)]="estadio" placeholder="Estadio"class="form-control">
+            </div>
+            
+
+        </div>
+            <label for="exampleInputEmail1">Info</label>
+
+            <textarea type="text" name="info" [(ngModel)]="info" placeholder="Info"class="textarea form-control"></textarea>
+            
+        <div class="form-group">
+            <input type="submit" value="Nuevo" class="btn btn-primary" >
+            <button type="button" routerLink="../" class="btn btn-secondary">Cancelar</button>
+
+        </div>
+        </form>
+    </div>
+    <div class="col-md-3 text-center">
+            <ul class="list-unstyled mb-0">
+                <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fupload.wikimedia.org%2Fwikipedia%2Fit%2F6%2F6d%2FPremier_League_Logo_2016.png&f=1&nofb=1" alt="Logo">
+            </ul>
+    </div>
+</div>
+
+        
+    </header>
+</div>

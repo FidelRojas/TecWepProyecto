@@ -1,0 +1,22 @@
+<!-- Page Content -->
+<div class="container">
+
+    <app-carousel></app-carousel>
+    <div class="jumbotron "> 
+        <h1 >Equipos</h1>
+        <br>
+        <button routerLink="/AddEquipo" type="button" class="btn btn-success" >
+            Añadir Equipo
+
+
+        </button>
+    <!-- Page Features -->
+    <div id="Equipos" class="row text-center row-cols-3 card-deck pb-4 justify-content-center"  >
+          <app-equipo-item *ngFor="let equipo of equipos" [equipo]="equipo"(deleteEquipo)="deleteEquipo($event)"></app-equipo-item>
+          
+    </div>
+    <!-- /.row -->
+</div>
+
+
+</div>
