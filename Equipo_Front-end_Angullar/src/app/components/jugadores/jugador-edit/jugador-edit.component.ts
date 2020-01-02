@@ -30,5 +30,19 @@ export class JugadorEditComponent implements OnInit {
       this.jugador.equipoId=parseInt(equipoId);
     });   
   }
+  
+  
+  alturaCal(){
+    $(document).ready(function(){
+      // Read value on page load
+      var b=$("#altura").val().toString();
+      $("#alturadiv b").html(b);
+        // Read value on change
+        $("#customRange").change(function(){
+          var a=$(this).val().toString(); 
+            $("#alturadiv b").html(a);
+        });
+    });
+  }
 
 }

@@ -21,7 +21,7 @@
                     <form id="addJugador">
                         <div class="form-group row">
                             <div class="col">
-                                <label for="exampleInputEmail1">Nombre</label>
+                                <label for="inputJugador">Nombre</label>
                             <input type="text" name="nombrejugador" [(ngModel)]="nombre" placeholder="Nombre" class="form-control">
                             <small id="nombreHelp" class="form-text text-muted">*El nombre es obligatorio</small>
 
@@ -30,24 +30,30 @@
                         </div>
                         <div class="form-group row">
                             <div class="col">
-                                <label for="exampleInputEmail1">Numero</label>
+                                <label for="inputJugador">Numero</label>
                                 <input type="text" name="numero" [(ngModel)]="numero" placeholder="Numero"class="form-control">
                                 <small id="nombreHelp" class="form-text text-muted">*El numero es obligatorio</small>
 
                             </div>
                             <div class="col">
-                                <label for="exampleInputEmail1">Pais</label>
+                                <label for="inputJugador">Pais</label>
                             <input type="text" name="pais" [(ngModel)]="pais" placeholder="Pais" class="form-control">
                             </div>
                             
                         </div>
                         <div class="form-group row">
+                           
                             <div class="col">
-                                <label for="exampleInputEmail1">Altura</label>
-                                <input type="text" name="altura" [(ngModel)]="altura" placeholder="Altura"class="form-control">
+                                <label for="inputJugador">Altura</label>
+
+                                    <input [(ngModel)]="altura" (click)="alturaCal()" id="altura" class="custom-range" type="range" value="180" min="150" max="200" name="altura"/>
+                                    <div id="alturadiv">
+                                        <div id="alturadiv"> <b>180</b> <i> cm.</i></div>
+                                    </div>
+
                             </div>
                             <div class="col">
-                                <label for="exampleInputEmail1">Posición</label>
+                                <label for="inputJugador">Posición</label>
                             <!-- <input type="text" name="posicion" [(ngModel)]="posicion" placeholder="Posición" class="form-control"> -->
                                 <select name="posicion" form="addJugador" [(ngModel)]="posicion" class="form-control">
                                     <option value="Delantero">Delantero</option>

@@ -9,7 +9,7 @@
             <div class="form-group row">
             
                 <div class="col">
-                        <label for="exampleInputEmail1">Nombre</label>
+                        <label for="inputJugador">Nombre</label>
 
     
                 <input type="text" name="nombreJugador" [(ngModel)]="jugador.nombre" placeholder="Nombre"class="form-control">
@@ -22,14 +22,14 @@
             </div>
             <div class="form-group row">
             <div class="col">
-                    <label for="exampleInputEmail1">Numero</label>
+                    <label for="inputJugador">Numero</label>
 
             <input type="text" name="numero" [(ngModel)]="jugador.numero" placeholder="Numero"class="form-control">
             <small id="numberHelp" class="form-text text-muted">*El numero es obligatorio</small>
 
             </div>
             <div class="col">
-            <label for="exampleInputEmail1">Posicion</label>
+            <label for="inputJugador">Posicion</label>
             <!-- <input type="text" name="posicion" [(ngModel)]="jugador.posicion" placeholder="Posicion" class="form-control"> -->
             <select name="posicion" form="addJugador" [(ngModel)]="jugador.posicion" class="form-control">
                 <option value="Delantero">Delantero</option>
@@ -45,14 +45,17 @@
         <div class="form-group row">
             
             <div class="col">
-                    <label for="exampleInputEmail1">Pais</label>
+                    <label for="inputJugador">Pais</label>
 
             <input type="text" name="pais" [(ngModel)]="jugador.pais" placeholder="Pais"class="form-control">
             </div>
             <div class="col">
-                    <label for="exampleInputEmail1">Alura</label>
+                    <label for="inputJugador">Alura</label>
 
-                <input type="text" name="altura" [(ngModel)]="jugador.altura" placeholder="Alura"class="form-control">
+                <input [(ngModel)]="jugador.altura" (click)="alturaCal()" id="altura" class="custom-range" type="range" value="180" min="150" max="200" name="altura"/>
+                <div id="alturadiv">
+                    <div id="alturadiv"> <b>{{jugador.altura}}</b> <i> cm.</i></div>
+                </div>
             </div>
             
 

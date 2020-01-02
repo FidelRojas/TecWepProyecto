@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { EquipoService} from '../../services/equipo.service'
 import { Equipo } from 'src/app/models/Equipo';
 import { Router } from '@angular/router';
+import * as $ from 'jquery';
 
 @Component({
   selector: 'app-add-equipo',
@@ -23,7 +24,7 @@ export class AddEquipoComponent implements OnInit {
   ngOnInit() {
   }
 
-  
+
   onSubmit(){
    
     this.e.nombre=this.nombre;
@@ -38,5 +39,5 @@ export class AddEquipoComponent implements OnInit {
     
   };
 
-  }
+}
 

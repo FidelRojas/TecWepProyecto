@@ -28,11 +28,11 @@ export class AddJugadorComponent implements OnInit {
   ngOnInit() {
     this.routeSub = this.route.params.subscribe(params => {
       this.idEquipo=params.equipoId;
-
+      this.altura=180;
     });
    
   }
-
+  
   
   onSubmit(){
     this.j.altura=this.altura;
@@ -44,15 +44,28 @@ export class AddJugadorComponent implements OnInit {
     this.addJugador.emit(this.j);
     $(document).ready(function(){
       $("#addModal").click();
-  });
+    });
     this.nombre="";
     this.pais="";
-    this.altura=null;
+    this.altura=180;
     this.numero=null;
     this.posicion="";
-
-
-  };
+   
+  }
+  
+  alturaCal(){
+    $(document).ready(function(){
+     // Read value on page load
+     var b=$("#altura").val().toString();
+     $("#alturadiv b").html(b);
+      // Read value on change
+      $("#customRange").change(function(){
+        var a=$(this).val().toString(); 
+          $("#alturadiv b").html(a);
+      });
+  });
+  
+  }
 
   }
 
