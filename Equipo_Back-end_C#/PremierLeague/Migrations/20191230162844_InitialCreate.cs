@@ -45,7 +45,7 @@ namespace PremierLeague.Migrations
                         column: x => x.equipoId,
                         principalTable: "Equipos",
                         principalColumn: "id",
-                        onDelete: ReferentialAction.Restrict);
+                        onDelete: ReferentialAction.Cascade);
                 });
 
             migrationBuilder.CreateIndex(
