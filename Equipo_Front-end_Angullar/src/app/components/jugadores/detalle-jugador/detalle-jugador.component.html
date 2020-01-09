@@ -8,10 +8,13 @@
       <div class="col-lg-6">
         <h1 class="font-weight-light">{{jugador.nombre}}</h1>
   
-        <p><b>Entrenador: </b>{{jugador.numero}}</p>
-        <p><b>Entrenador: </b>{{jugador.pais}}</p>
-        <p><b>Entrenador: </b>{{jugador.altura}}</p>
-        <p><b>Entrenador: </b>{{jugador.posicion}}</p>
+        <p><b>Número: </b>{{jugador.numero}}</p>
+        <p><b>País: </b>{{jugador.pais}}</p>
+        <p><b>Altura: </b>{{jugador.altura}} <i> cm.</i> </p>
+        <p><b>Posición: </b>{{jugador.posicion}}</p>
+        <p><b>Goles: </b>{{jugador.goles}}</p>
+
+        
 
         <div class="btn-group" role="group">
             <a (click)="onEdit()"  class="btn btn-primary  ">Editar</a>

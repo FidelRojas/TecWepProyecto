@@ -26,7 +26,9 @@ export class DetalleJugadorComponent implements OnInit {
       this.jugador.altura = e.altura;
       this.jugador.numero = e.numero;
       this.jugador.pais = e.pais;
-      this.jugador.posicion = e.posicion;      
+      this.jugador.posicion = e.posicion;   
+      this.jugador.goles = e.goles;      
+
     });   
     // this.routeSub = this.route.params.subscribe(params => {
     //   this.jugadorId=params.idJugador;

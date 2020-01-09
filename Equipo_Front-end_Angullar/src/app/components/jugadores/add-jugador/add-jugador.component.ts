@@ -16,6 +16,8 @@ export class AddJugadorComponent implements OnInit {
   pais:string;
   altura:number;
   numero:number;
+  goles:number;
+
   posicion:string;
   j:Jugador=new Jugador;
   @Input() idEquipo:number;
@@ -28,7 +30,7 @@ export class AddJugadorComponent implements OnInit {
   ngOnInit() {
     this.routeSub = this.route.params.subscribe(params => {
       this.idEquipo=params.equipoId;
-      this.altura=180;
+      this.altura=180;c
     });
    
   }
@@ -39,6 +41,7 @@ export class AddJugadorComponent implements OnInit {
     this.j.nombre=this.nombre;
     this.j.pais=this.pais;
     this.j.numero=this.numero;
+    this.j.goles=this.goles;
     this.j.posicion=this.posicion;
     this.j.equipoId=this.idEquipo;
     this.addJugador.emit(this.j);
@@ -50,6 +53,8 @@ export class AddJugadorComponent implements OnInit {
     this.altura=180;
     this.numero=null;
     this.posicion="";
+    this.goles=null;
+
    
   }
   
@@ -63,9 +68,9 @@ export class AddJugadorComponent implements OnInit {
         var a=$(this).val().toString(); 
           $("#alturadiv b").html(a);
       });
-  });
+    });
   
   }
 
-  }
+}
 

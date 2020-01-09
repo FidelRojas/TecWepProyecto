@@ -42,4 +42,7 @@ export class JugadorService {
     const url=`${this.jugadorUrl}${jugador.equipoId}/jugadores/${jugador.id}`;
     return this.http.put(url,jugador,httpOptions)
   }
+  getTop():Observable<Jugador[]>{
+   return this.http.get<Jugador[]>(this.jugadorUrl+"top");
+  }
 }

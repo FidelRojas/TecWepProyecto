@@ -5,5 +5,6 @@ export class Jugador{
     altura:number;
     numero:number;
     posicion:string;
+    goles:number;
     equipoId:number;
 }

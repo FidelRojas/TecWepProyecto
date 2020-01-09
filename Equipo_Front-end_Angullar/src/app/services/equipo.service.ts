@@ -42,6 +42,6 @@ export class EquipoService {
     console.log("Se edito el equipo ",equipo.id);
     
     const url=`${this.equiposUrl}/${equipo.id}`;
-    return this.http.put(url,equipo,httpOptions)
+    return this.http.put(url,equipo,httpOptions);
   }
 }
