@@ -30,7 +30,7 @@ export class AddJugadorComponent implements OnInit {
   ngOnInit() {
     this.routeSub = this.route.params.subscribe(params => {
       this.idEquipo=params.equipoId;
-      this.altura=180;c
+      this.altura=180;
     });
    
   }
