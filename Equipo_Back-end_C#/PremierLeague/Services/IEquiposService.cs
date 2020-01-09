@@ -9,6 +9,7 @@ namespace PremierLeague.Services
     public interface IEquiposService
     {
         Task<IEnumerable<Equipo>> GetEquiposAsync(bool showJugadores, string orderBy);
+        Task<IEnumerable<Jugador>> GetTopAsync();
         Task<Equipo> GetEquipoAsync(int id, bool showJugadores);
         Task<Equipo> CreateEquipoAsync(Equipo newEquipo);
         Task<bool> DeleteEquipoAsync(int id);

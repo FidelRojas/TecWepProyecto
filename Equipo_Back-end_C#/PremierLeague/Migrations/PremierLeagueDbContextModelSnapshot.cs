@@ -51,6 +51,8 @@ namespace PremierLeague.Migrations
 
                     b.Property<int?>("equipoId");
 
+                    b.Property<int>("goles");
+
                     b.Property<string>("nombre")
                         .IsRequired();
 

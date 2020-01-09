@@ -19,7 +19,7 @@ namespace PremierLeague.Services
         {
             this.premierLeagueRepository = premierLeagueRepository;
             this.mapper = mapper;
-            allowedOrderByValues = new HashSet<string>() { "nombre", "numero", "pais", "id" };
+            allowedOrderByValues = new HashSet<string>() { "nombre", "numero", "pais", "id", "goles" };
 
         }
 

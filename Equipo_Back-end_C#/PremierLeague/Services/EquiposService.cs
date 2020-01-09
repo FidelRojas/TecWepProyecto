@@ -19,7 +19,7 @@ namespace PremierLeague.Services
         {
             this.premierLeagueRepository = premierLeagueRepository;
             this.mapper = mapper;
-            allowedOrderByValues = new HashSet<string>() { "nombre", "entrenador", "estadio", "id" };
+            allowedOrderByValues = new HashSet<string>() { "nombre", "entrenador", "estadio", "goles", "id" };
         }
 
         public async Task<Equipo> CreateEquipoAsync(Equipo newEquipo)
@@ -100,6 +100,18 @@ namespace PremierLeague.Services
             }
 
             return equipo;
+        }
+
+        public async Task<IEnumerable<Jugador>> GetTopAsync()
+        {
+            var orderBy = "goles";
+            var orderByLower = orderBy.ToLower();
+            if (!allowedOrderByValues.Contains(orderByLower))
+            {
+                throw new BadRequestOperationException($"invalid Order By value : {orderBy} the only allowed values are {string.Join(", ", allowedOrderByValues)}");
+            }
+            var equiposEntities = await premierLeagueRepository.GetTop(orderBy);
+            return mapper.Map<IEnumerable<Jugador>>(equiposEntities);
         }
     }
 }

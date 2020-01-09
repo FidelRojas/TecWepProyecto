@@ -18,7 +18,7 @@ namespace PremierLeague.Data.Entities
         public int altura { get; set; }
         public int numero { get; set; }
         public string posicion { get; set; }
-
+        public int goles { get; set; }
 
 
         [ForeignKey("equipoId")]

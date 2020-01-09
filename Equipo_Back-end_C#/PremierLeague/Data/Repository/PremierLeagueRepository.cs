@@ -11,13 +11,13 @@ namespace PremierLeague.Data.Repository
 {
     public class PremierLeagueRepository : IPremierLeagueRepository
     {
-        private List<Jugador> jugadores=new List<Jugador>();
+        private List<Jugador> jugadores = new List<Jugador>();
         private PremierLeagueDbContext premierLeagueDbContext;
         public PremierLeagueRepository(PremierLeagueDbContext premierLeagueDbContext)
         {
             this.premierLeagueDbContext = premierLeagueDbContext;
 
-            
+
 
         }
         public void CreateEquipo(EquipoEntity equipo)
@@ -27,7 +27,7 @@ namespace PremierLeague.Data.Repository
 
         public void CreateJugador(JugadorEntity jugador)
         {
-            /**var latestJugador = jugadores.OrderByDescending(b => b.Id).FirstOrDefault();
+            /**var latestJugador = jugadores.OrderByDescendingDescending(b => b.Id).FirstOrDefault();
             var nextJugadorId = latestJugador == null ? 1 : latestJugador.Id + 1;
             jugador.Id = nextJugadorId;
             jugadores.Add(jugador);
@@ -38,7 +38,7 @@ namespace PremierLeague.Data.Repository
 
         public async Task DeleteEquipoAsync(int id)
         {
-            var equipoToDelete = await premierLeagueDbContext.Equipos.SingleAsync(a=>a.id==id);
+            var equipoToDelete = await premierLeagueDbContext.Equipos.SingleAsync(a => a.id == id);
             premierLeagueDbContext.Equipos.Remove(equipoToDelete);
         }
 
@@ -74,20 +74,20 @@ namespace PremierLeague.Data.Repository
             {
                 query = query.Include(a => a.Jugadores);
             }
-            
+
             switch (orderBy)
             {
                 case "nombre":
-                    query = query.OrderBy(a => a.nombre);
+                    query = query.OrderByDescending(a => a.nombre);
                     break;
                 case "fundacion":
-                    query = query.OrderBy(a => a.fundacion);
+                    query = query.OrderByDescending(a => a.fundacion);
                     break;
                 case "entrenador":
-                    query = query.OrderBy(a => a.entrenador);
+                    query = query.OrderByDescending(a => a.entrenador);
                     break;
                 default:
-                    query = query.OrderBy(a => a.id);
+                    query = query.OrderByDescending(a => a.id);
                     break;
             }
             query = query.AsNoTracking();
@@ -111,7 +111,7 @@ namespace PremierLeague.Data.Repository
             return jugadores;
         }
 
-        public async Task<IEnumerable<JugadorEntity>> GetJugadoresAsync(int equipoId,string orderBy = "id")
+        public async Task<IEnumerable<JugadorEntity>> GetJugadoresAsync(int equipoId, string orderBy = "id")
         {
             IQueryable<JugadorEntity> query = premierLeagueDbContext.Jugadores;
             //if (showJugadores)
@@ -121,23 +121,52 @@ namespace PremierLeague.Data.Repository
 
             switch (orderBy)
             {
+                case "goles":
+                    query = query.OrderByDescending(a => a.goles);
+                    break;
                 case "nombre":
-                    query = query.OrderBy(a => a.nombre);
+                    query = query.OrderByDescending(a => a.nombre);
                     break;
                 case "altura":
-                    query = query.OrderBy(a => a.altura);
+                    query = query.OrderByDescending(a => a.altura);
                     break;
                 case "numero":
-                    query = query.OrderBy(a => a.numero);
+                    query = query.OrderByDescending(a => a.numero);
                     break;
                 default:
-                    query = query.OrderBy(a => a.id);
+                    query = query.OrderByDescending(a => a.id);
                     break;
             }
             query = query.AsNoTracking().Where(b => b.Equipo.id == equipoId);
             return await query.ToArrayAsync();
         }
-    
+
+        public async Task<IEnumerable<JugadorEntity>> GetTop(string orderBy = "goles")
+
+        {
+            IQueryable<JugadorEntity> query = premierLeagueDbContext.Jugadores;
+            switch (orderBy)
+            {
+                case "goles":
+                    query = query.OrderByDescending(a => a.goles);
+                    break;
+                case "nombre":
+                    query = query.OrderByDescending(a => a.nombre);
+                    break;
+                case "altura":
+                    query = query.OrderByDescending(a => a.altura);
+                    break;
+                case "numero":
+                    query = query.OrderByDescending(a => a.numero);
+                    break;
+                default:
+                    query = query.OrderByDescending(a => a.id);
+                    break;
+            }
+
+            return await query.ToArrayAsync();
+
+        }
 
         public async Task<bool> SaveChangesAsync()
         {
@@ -162,7 +191,7 @@ namespace PremierLeague.Data.Repository
             {
                 jugadorToUpdate.Pages = jugador.Pages
             }*/
-            
+
             premierLeagueDbContext.Entry(jugador.Equipo).State = EntityState.Unchanged;
             premierLeagueDbContext.Jugadores.Update(jugador);
         }

@@ -17,6 +17,7 @@ namespace PremierLeague.Models
 
         public int numero { get; set; }
         public string posicion { get; set; }
+        public int goles { get; set; }
 
         public int? equipoId { get; set; }
 

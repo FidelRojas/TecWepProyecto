@@ -14,6 +14,7 @@ namespace PremierLeague.Data.Repository
         //equipos
         Task <EquipoEntity> GetEquipoAsync(int id, bool showJugadores = false);
         Task<IEnumerable<EquipoEntity>> GetEquiposAsync(bool showJugadores = false, string orderBy = "id");
+        Task<IEnumerable<JugadorEntity>> GetTop(string orderBy = "goles");
         Task DeleteEquipoAsync(int id);
         void UpdateEquipo(EquipoEntity equipo);
         void CreateEquipo(EquipoEntity equipo);

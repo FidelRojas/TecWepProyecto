@@ -39,6 +39,25 @@ namespace PremierLeague.Controllers
             }
         }
 
+        [HttpGet("top")]
+        public async Task<ActionResult<Equipo>> GetTop()
+        {
+            try
+            {
+                var equipo = await equiposService.GetTopAsync();
+                return Ok(equipo);
+
+            }
+            catch (NotFoundItemException ex)
+            {
+                return NotFound(ex.Message);
+            }
+            catch (Exception ex)
+            {
+                return this.StatusCode(StatusCodes.Status500InternalServerError, $"Something bad happened: {ex.Message}");
+            }
+        }
+
         [HttpGet("{id}")]
         public async Task<ActionResult<Equipo>> GetEquipoAsync(int id, bool showJugadores = true)
         {
