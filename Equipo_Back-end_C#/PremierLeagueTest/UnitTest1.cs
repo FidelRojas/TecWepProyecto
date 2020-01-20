@@ -37,8 +37,9 @@ namespace XUnitTestProject2
 
             var brandService = new EquiposService(MoqDealerRespository.Object, mapper);
             //act 
-            await Assert.ThrowsAsync<NotFoundItemException>(() => brandService.GetEquipoAsync(1, false));
-
+            //await Assert.ThrowsAsync<NotFoundItemException>(() => brandService.GetEquipoAsync(1, false));
+            var result = await brandService.GetEquipoAsync(22, false);
+            Assert.Equal( "antonio", result.nombre);
         }
         [Fact]
         public void Should_Verify_All_Mock_Functions()
@@ -50,18 +51,7 @@ namespace XUnitTestProject2
             mock.Setup(x => x.GetEquipoAsync(id,false)).Returns(Task.FromResult(equipo));
             Assert.Throws<MockException>(() => mock.VerifyAll());
         }
-        /*[Fact]
-        public void Should_Verify_Mock_Functions_Not_Executed_Marked_Verifiable()
-        {
-            var id = 12;
-            var nombre = "Fred Flinstone";
-            var equipo = new Equipo { id = id, nombre = nombre };
-            var mock = new Mock<IRepo>();
-            Expression<Func<IRepo, Customer>> call = x => x.Find(id);
-            var errorMessage = "Method not called";
-            mock.Setup(call).Returns(customer).Verifiable(errorMessage);
-            var ex = Assert.Throws<MockException>(() => mock.Verify(call));
-        }*/
+        
     }
 
 }
